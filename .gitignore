@@ -1,0 +1,27 @@
+*.exe
+*.obj
+*.o
+*.out
+*.log
+*.tmp
+*.swp
+*~
+# Build directories
+build/
+dist/
+*.egg-info/
+# Python bytecode
+__pycache__/
+*.py[cod]
+# Virtual environment
+venv/
+# IDE-specific files
+.vscode/
+.idea/
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+
+
+node_modules
