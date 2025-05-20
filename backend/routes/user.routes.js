@@ -1,5 +1,5 @@
 import express from 'express';
-import { createUser } from '../controllers/user.api.js'; // Import the createUser function from the controller
+import { createUser, deleteUser, getAllUsers, getUserById, updateUser } from '../controllers/user.api.js'; // Import the createUser function from the controller
 
 const router = express.Router();
 
@@ -8,5 +8,20 @@ const router = express.Router();
 
 // Route to create a new user
 router.post('/create', createUser);
+// The createUser function is called when a POST request is made to the /create endpoint.
+
+// Route to delete a user by ID
+router.delete('/deleteUser/:id', deleteUser);
+
+// Route to get all users
+router.get('users/', getAllUsers);
+
+// Route to get one user by ID
+router.get('users/:id', getUserById);
+
+// Route to update a user by ID
+router.put('users/:id', updateUser);
+
+
 
 export default router;
